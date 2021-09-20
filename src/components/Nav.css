@@ -1,0 +1,11 @@
+.navegacion{
+    display: flex;
+    justify-content: center;
+    background: #11052C;
+    margin-bottom: 2rem;
+}
+
+.textNav{
+    margin: 1rem;
+    color: white;
+}
