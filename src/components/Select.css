@@ -1,0 +1,29 @@
+.selector{
+    outline: none;
+    height: 1.4rem;
+    border: 2px solid #23049D;
+    border-radius: 0.4rem;
+    margin: 0rem 2rem 1rem 2rem;
+    width: 20%;
+    color: white;
+    background: transparent;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.option{
+    background-color: #000000;
+    font-family: 'Nunito', sans-serif;
+}
+
+.label{
+    margin: 1rem 2rem 0rem 2rem;
+    width: 20%;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}

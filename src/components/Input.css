@@ -7,5 +7,6 @@ input{
     width: -webkit-fill-available;
     color: white;
     background: transparent;
-    text-align: center
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
 }

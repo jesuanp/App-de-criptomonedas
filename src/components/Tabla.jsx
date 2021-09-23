@@ -1,13 +1,17 @@
 import React, { useEffect } from "react";
 import { connect } from 'react-redux';
-import { searchCoins} from '../redux/actions';
+import { searchCoins, mayorAMenor } from '../redux/actions';
 import './Tabla.css';
 
-function Tabla({search, search2, searchCoins}){
+function Tabla({search, searchCoins}){
 
     useEffect(() => {
         searchCoins()
     }, [])
+
+    useEffect(()=>{
+        console.log('Cambio el estado de search')
+    }, [search])
 
     return (
         <div className='containers'>
@@ -22,14 +26,14 @@ function Tabla({search, search2, searchCoins}){
                         </div>
                     </div>
                     <div>
-                        <p></p>
+                        <p>Cambio de precio 24h</p>
                     </div>
                     <div className='current_price'>
                         <p className='textP precios'>Precio actual</p>
                     </div>
                 </div>
                 {
-                    search2.map((e, i) => <div key={i} id={e.id} className='container'>
+                    search.map((e, i) => <div key={e.id} id={e.id} className='container'>
                         <div className='nameYnumero'>
                             <div>
                                 <p className='numeros'>{i + 1}</p>
@@ -54,8 +58,7 @@ function Tabla({search, search2, searchCoins}){
 }
 const mapStateToProps = (store) => {
     return {
-        search: store.searchCryptos,
-        search2: store.filtrados
+        search: store.filtrados,
     }
 }
 

@@ -1,6 +1,8 @@
 export const searchCoin = "SEARCH_COIN";
 export const espesifica = "COIN_ESPESIFICA";
 export const copia = "COPIA";
+export const mayorMenor = 'MAYOR_A_MENOR';
+export const menorMayor = 'MENOR_A_MAYOR';
 
 export function searchCoins(){
     return function(dispatch){
@@ -18,5 +20,17 @@ export function coinEspesifica(coin){
     return {
         type: espesifica,
         payload: coin
+    }
+}
+
+export function mayorAMenor(){
+    return {
+        type: mayorMenor
+    }
+}
+
+export function menorAMayor(){
+    return {
+        type: menorMayor
     }
 }
