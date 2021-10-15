@@ -1,17 +1,16 @@
 import React, {useRef, useEffect} from 'react';
 import { connect } from 'react-redux';
-import { mayorAMenor, menorAMayor, searchCoins } from '../redux/actions';
+import { order, estadoInicial } from '../redux/actions';
 import './Select.css';
 
-function Select({mayorAMenor, menorAMayor, searchCoins}){
+function Select({order, estadoInicial}){
 
     let miReft = useRef(null)
 
     function actualizar(){
         let ref = miReft.current.value;
-        if(ref === 'A - Z') return mayorAMenor();
-        else if(ref === 'Z - A') return menorAMayor();
-        else if(ref === 'Mas conocida') return searchCoins();
+        if(ref !== 'Mas conocida') return order(ref);
+        else if(ref === 'Mas conocida') return estadoInicial();
     }
 
 
@@ -29,4 +28,4 @@ function Select({mayorAMenor, menorAMayor, searchCoins}){
     )
 }
 
-export default connect (null, {mayorAMenor, menorAMayor, searchCoins})(Select)
+export default connect (null, {order, estadoInicial})(Select)

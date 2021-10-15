@@ -9,10 +9,6 @@ function Tabla({search, searchCoins}){
         searchCoins()
     }, [])
 
-    useEffect(()=>{
-        console.log('Cambio el estado de search')
-    }, [search])
-
     return (
         <div className='containers'>
             <div className='containerAll'>
