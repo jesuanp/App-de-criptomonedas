@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './Input.css';
 import { coinEspesifica } from '../redux/actions';
 
-function Input({lista, filters, coinEspesifica}){
+function Input({coinEspesifica}){
 
     let miRef = useRef(null)
 
@@ -19,11 +19,4 @@ function Input({lista, filters, coinEspesifica}){
     )
 }
 
-const mapStateToProps = (store) => {
-    return {
-        lista: store.searchCryptos,
-        filters: store.filtrados
-    }
-}
-
-export default connect (mapStateToProps, {coinEspesifica})(Input)
+export default connect (null, {coinEspesifica})(Input)

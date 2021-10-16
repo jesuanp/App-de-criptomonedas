@@ -22,17 +22,18 @@ p{
 }
 
 .container{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     height: 2.5rem;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #121013;
     width: -webkit-fill-available;
 }
 
 .container:hover{
-    background: #23049D;
+    background: #1b00888e;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -43,10 +44,11 @@ p{
 }
 
 .barraArriba{
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid #121013;
 }
 
 .containers{
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -112,4 +114,71 @@ p{
 
 .rojo{
     color: #810000;
+}
+
+.porcentajePhone {
+    visibility: hidden;
+    position: absolute;
+}
+
+@media (max-width: 620px){
+    .precio24h {
+        position: absolute;
+        visibility: hidden;
+        z-index: -1;
+    }
+
+
+    .phone {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 5em;
+        width: 13em;
+    }
+
+    .textP {
+        position: absolute;
+        top: 1em;
+        margin: 0px;
+        width: 8em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .simbolo {
+        position: absolute;
+        top: 2.3em;
+        margin: 0px;
+    }
+
+    .container {
+        height: 3.5rem;
+        width: 100%;
+    }
+
+    .precios {
+        position: absolute;
+        margin: 0px;
+        right: 0.3em;
+        top: 0.6em;
+    }
+
+    .prueba {
+        width: 6em;
+    }
+
+    .name {
+        width: 12em;
+    }
+
+    .porcentajePhone {
+        visibility: visible;
+        position: absolute;
+        margin: 0px;
+        right: 0.3em;
+        top: 1.9em;
+    }
 }

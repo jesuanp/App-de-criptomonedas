@@ -1,8 +1,8 @@
-import { searchCoin, espesifica, orderABC, stateInitial } from './actions.js';
+import { searchCoin, espesifica, orderABC, stateInitial, filterByPorcentaje, filterByPrices } from './actions.js';
 
 const initialState = {
     searchCryptos: [],
-    filtrados: [],
+    filtrados: []
 }
 
 export default function reducer(state = initialState, action){
@@ -38,6 +38,50 @@ export default function reducer(state = initialState, action){
                 if(a.id < b.id) return 1;
                 return 0;
             })
+        }
+
+        case filterByPorcentaje: return {
+            ...state,
+            filtrados: action.arg === 'Higher' ? action.payload.sort((a, b) => {
+                if (a.price_change_percentage_24h > b.price_change_percentage_24h) {
+                  return -1;
+                }
+                if (a.price_change_percentage_24h < b.price_change_percentage_24h) {
+                  return 1;
+                }
+                return 0;
+                })
+                : action.payload.sort((a, b) => {
+                    if (a.price_change_percentage_24h > b.price_change_percentage_24h) {
+                    return 1;
+                    }
+                    if (a.price_change_percentage_24h < b.price_change_percentage_24h) {
+                    return -1;
+                    }
+                    return 0;
+                })
+        }
+
+        case filterByPrices: return {
+            ...state,
+            filtrados: action.arg === 'Higher' ? action.payload.sort((a, b) => {
+                if (a.current_price > b.current_price) {
+                  return -1;
+                }
+                if (a.current_price < b.current_price) {
+                  return 1;
+                }
+                return 0;
+                })
+                : action.payload.sort((a, b) => {
+                    if (a.current_price > b.current_price) {
+                    return 1;
+                    }
+                    if (a.current_price < b.current_price) {
+                    return -1;
+                    }
+                    return 0;
+                })
         }
 
         default: return state
