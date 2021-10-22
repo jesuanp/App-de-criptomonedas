@@ -6,7 +6,7 @@ export default function Nav(){
 
     return (
         <div className='navegacion'>
-            <h4 className='textNav'>Precios de crypto monedas</h4>
+            <h4 className='textNav'>Cripto-Monedas</h4>
         </div>
     )
 }
