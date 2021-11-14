@@ -1,6 +1,6 @@
 import Tabla from './components/Tabla.jsx';
-import Nav from './components/Nav'
-import Input from './components/Input'
+import Nav from './components/Nav';
+import Input from './components/Input';
 import Select from './components/Select.jsx';
 import './App.css';
 
