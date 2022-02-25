@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import './Input.css';
 import { coinEspesifica } from '../redux/actions';
@@ -14,7 +14,7 @@ function Input({coinEspesifica}){
 
     return (
         <div>
-            <input type="text" placeholder='Busca una cryto...' ref={miRef} onChange={()=>filtrar()}/>
+            <input type="text" placeholder='Busca una criptomoneda...' ref={miRef} onChange={()=>filtrar()}/>
         </div>
     )
 }

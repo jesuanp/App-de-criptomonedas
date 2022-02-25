@@ -27,14 +27,13 @@ p{
     justify-content: space-between;
     flex-direction: row;
     height: 2.5rem;
-    border-bottom: 2px solid #121013;
+    border-bottom: 2px solid #141E27;
     width: -webkit-fill-available;
 }
 
 .container:hover{
-    background: #1b00888e;
+    background: #064663;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .barraArriba:hover{
@@ -43,7 +42,7 @@ p{
 }
 
 .barraArriba{
-    border-bottom: 4px solid #121013;
+    border-bottom: 4px solid #141E27;
 }
 
 .containers{
@@ -58,7 +57,7 @@ p{
     align-items: center;
     margin: 1rem 2rem 1rem 2rem;
     width: -webkit-fill-available;
-    background: #11052C;
+    background: #1A374D;
 }
 
 .name{
@@ -108,11 +107,11 @@ p{
 }
 
 .verde{
-    color: #346751;
+    color: #4a9273;
 }
 
 .rojo{
-    color: #810000;
+    color: #c23434;
 }
 
 .porcentajePhone {

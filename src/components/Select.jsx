@@ -29,7 +29,7 @@ function Select({order, estadoInicial, porcentaje, orderByprice }){
             <div className="containerSelects">
                 <div className="div">
                     <div>
-                        <label className='label'>alphabetical order:</label>
+                        <label className='label'>Orden alfabetico:</label>
                     </div>
                     <div>
                         <select onChange={actualizar} defaultValue="Mas conocida" className='selector' ref={miReft}>
@@ -43,13 +43,13 @@ function Select({order, estadoInicial, porcentaje, orderByprice }){
             <div className="containerSelects">
                 <div className="div">
                     <div>
-                        <label className='label'>order by percentage:</label>
+                        <label className='label'>Orden por porcentaje:</label>
                     </div>
                     <div>
                         <select defaultValue="Select" className='selector' onChange={filterByPorcentaje} ref={refPorcentaje} >
                             <option disabled value="Select" >Select</option>
-                            <option className='option'>Higher</option>
-                            <option className='option'>Minor</option>
+                            <option className='option'>Mayor</option>
+                            <option className='option'>Menor</option>
                         </select>
                     </div>
                 </div>
@@ -57,13 +57,13 @@ function Select({order, estadoInicial, porcentaje, orderByprice }){
             <div className="containerSelects">
                 <div className="div">
                     <div>
-                        <label className='label'>sort by price:</label>
+                        <label className='label'>Ordenar por el precio:</label>
                     </div>
                     <div>
                         <select defaultValue="Select" className='selector' onChange={filterByPrices} ref={refPrices} >
                             <option disabled value="Select" >Select</option>
-                            <option className='option'>Higher</option>
-                            <option className='option'>Minor</option>
+                            <option className='option'>Mayor</option>
+                            <option className='option'>Menor</option>
                         </select>
                     </div>
                 </div>

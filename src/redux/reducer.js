@@ -42,7 +42,7 @@ export default function reducer(state = initialState, action){
 
         case filterByPorcentaje: return {
             ...state,
-            filtrados: action.arg === 'Higher' ? action.payload.sort((a, b) => {
+            filtrados: action.arg === 'Mayor' ? action.payload.sort((a, b) => {
                 if (a.price_change_percentage_24h > b.price_change_percentage_24h) {
                   return -1;
                 }
@@ -64,7 +64,7 @@ export default function reducer(state = initialState, action){
 
         case filterByPrices: return {
             ...state,
-            filtrados: action.arg === 'Higher' ? action.payload.sort((a, b) => {
+            filtrados: action.arg === 'Mayor' ? action.payload.sort((a, b) => {
                 if (a.current_price > b.current_price) {
                   return -1;
                 }
@@ -74,11 +74,11 @@ export default function reducer(state = initialState, action){
                 return 0;
                 })
                 : action.payload.sort((a, b) => {
-                    if (a.current_price > b.current_price) {
-                    return 1;
-                    }
                     if (a.current_price < b.current_price) {
                     return -1;
+                    }
+                    if (a.current_price > b.current_price) {
+                    return 1;
                     }
                     return 0;
                 })

@@ -9,8 +9,8 @@ function App() {
     <>
       {/* <img className="imgFondo" src="https://www.santander.com/es/stories/guia-para-saber-que-son-las-criptomonedas/_jcr_content/root/story/bottomParsys/resource_composer/resource-composer__composition-three-2.coreimg.jpeg/1612548160888/im-storie-guia-para-saber-que-son-las-criptomonedas-3.jpeg" alt="fondo de pantalla" /> */}
       <Nav />
-      <Input />
       <Select />
+      <Input />
       <Tabla />
     </>
   );
